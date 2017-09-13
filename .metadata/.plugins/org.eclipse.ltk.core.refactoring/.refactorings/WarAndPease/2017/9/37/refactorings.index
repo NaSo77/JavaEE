@@ -1,0 +1,17 @@
+1505285041664	Copy compilation unit
+1505285044263	Move file
+1505285046132	Delete element
+1505289624687	Extract method 'longestWord'
+1505290973221	Rename local variable 'string'
+1505291728500	Extract method 'worsToFiles'
+1505291734742	Rename method 'worsToFiles'
+1505295417110	Extract method 'createFile'
+1505296484180	Rename local variable 'words'
+1505296519975	Extract method 'getAllWords'
+1505297635057	Extract method 'mostFrequentWord'
+1505297957628	Extract method 'convertArrayListToHashMap'
+1505301080949	Rename method 'createFile'
+1505301086873	Rename method 'getPrintSream'
+1505301785504	Extract method 'getScanner'
+1505305613297	Extract method 'allWords'
+1505306292942	Rename method 'allWords'

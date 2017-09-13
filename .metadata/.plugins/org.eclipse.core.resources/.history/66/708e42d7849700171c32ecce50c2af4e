@@ -1,0 +1,11 @@
+package files;
+
+import java.io.File;
+
+public class Files {
+    public static void main(String[] args) {
+	String fileName = "file1.txt";
+	File file = new File(fileName);
+	
+    }
+}

@@ -1,0 +1,26 @@
+package warAndPease;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class WarAndPease {
+    public static void main(String[] args) throws IOException {
+
+	String relativePath = ".\\src\\warAndPease\\";
+	String fileName = "war_and_peace.txt";
+
+	File book = new File(fileName);
+
+	System.out.println(book.canRead());
+	System.out.println(book.canWrite());
+
+	Scanner scanner = new Scanner(book);
+
+	while (scanner.hasNextLine()) {
+	    System.out.println(scanner.nextLine());
+	}
+
+	scanner.close();
+    }
+}

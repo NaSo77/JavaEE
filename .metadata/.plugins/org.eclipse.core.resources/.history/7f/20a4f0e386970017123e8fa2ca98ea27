@@ -1,0 +1,16 @@
+package files;
+
+import java.io.File;
+
+public class Files {
+    public static void main(String[] args) {
+	String fileName = "/folder/file1.txt";
+
+	File file = new File(fileName);
+
+	if (!file.exists()) {
+	    file.createNewFile();
+	}
+
+    }
+}

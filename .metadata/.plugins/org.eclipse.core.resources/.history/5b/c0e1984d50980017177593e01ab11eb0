@@ -1,0 +1,25 @@
+package homework;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class WarAndPease {
+    public static void main(String[] args) throws IOException {
+
+	String relativePath = ".\\src\\homework\\";
+	String fileName = "war_and_peace.txt";
+
+	File book = new File(relativePath, fileName);
+
+	System.out.println(book.exists());
+
+	Scanner scanner = new Scanner(book);
+	  System.out.println(scanner.next());
+	while (scanner.hasNext()) {
+	    System.out.println(scanner.next());
+	}
+
+	scanner.close();
+    }
+}

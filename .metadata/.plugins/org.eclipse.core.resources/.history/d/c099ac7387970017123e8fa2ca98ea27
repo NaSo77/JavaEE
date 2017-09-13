@@ -1,0 +1,22 @@
+package files;
+
+import java.io.File;
+
+public class Files {
+    public static void main(String[] args) {
+	String fileName = "folder" + File.pathSeparator + "file1.txt";
+
+	File file = new File(fileName);
+	file.mkdirs();
+	//
+	// if (!file.exists()) {
+	// try {
+	// file.createNewFile();
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
+
+    }
+}
