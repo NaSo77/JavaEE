@@ -30,6 +30,22 @@ public class WarAndPease {
 	totalLines(book);
 	totalSymbols(book);
 	totalCommas(book);
+
+	printbook(book);
+    }
+
+    private static void printbook(File book) {
+	Scanner scanner = getScanner(book);
+	if (scanner == null) {
+	    System.out.println("Scanner is null");
+	    return;
+	}
+
+	while (scanner.hasNextLine()) {
+	    System.out.println(scanner.nextLine());
+
+	}
+	scanner.close();
     }
 
     private static void totalCommas(File book) {
