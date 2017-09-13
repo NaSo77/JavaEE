@@ -14,7 +14,7 @@ import java.util.TreeSet;
 
 public class WarAndPease {
 
-    public static String relativePath = ".\\src\\homework\\";
+    public static String relativePath = "src" + File.separator + "homework";
     public static String fileName = "war_and_peace.txt";
 
     public static void main(String[] args) {
@@ -222,7 +222,7 @@ public class WarAndPease {
 
 	wordsByLength.addAll(words);
 
-	File folder = new File(relativePath, "\\wordsBySymbols");
+	File folder = new File(relativePath, "wordsBySymbols");
 	if (!folder.exists()) {
 	    folder.mkdir();
 	} else {
