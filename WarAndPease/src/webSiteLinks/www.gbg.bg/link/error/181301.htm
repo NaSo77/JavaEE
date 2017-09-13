@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Гювеч: Докладване за грешка</title>
+  <meta name="googlebot" content="nofollow" />
+  <meta name="robots" content="nofollow" />
+  <style>
+    @import "/resources/popup.css";
+  </style>
+  <script src="/resources/js/common.js"></script>
+  <script>
+    function reloadCaptcha() {
+        x = document.getElementById("captchaImg");
+        x.src = "http://www.gbg.bg/index.php/captcha#" + Math.random();
+    }
+  </script>
+</head>
+<body>
+    <div id="main">
+                    <form name="sendmail" method="post">
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td colspan="2">
+                    <div class="fl"><h1>Докладване за грешка</h1></div>
+                    <div class="fr"><a href="#" onclick="
+                    document.domain='gbg.bg';
+                    top.window.tb_remove();
+                    top.window.setZIndex();
+                    "><img
+                    src="/resources/im/popup_close.gif" width="24" height="24" alt="затвори" title="затвори" border="0"/></a></div>
+                </td>
+              </tr>
+              <tr><td colspan="2" height="30" valign="top"><a href="http://sanemiforex.com/" target="_blank">Sanemi Forex - валутна търговия</a><br /><div class="url">http://sanemiforex.com/</div></td></tr>
+              <tr><td height="15"></td></tr>
+              <tr>
+                <td align="right" width="170" valign="top" height="46">Вашето име: <span class="red">*</span>&nbsp;&nbsp;</td>
+                <td valign="top">
+                    <input type="text" name="name" class="popupInp" size="40" value="" />
+                    <div id="namemsg" width="100%"></div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="top" height="46">Вашият имейл: <span class="red">*</span>&nbsp;&nbsp;</td>
+                <td valign="top">
+                    <input type="text" name="email" class="popupInp" size="40" value="" />
+                    <div id="emailmsg" width="100%"></div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="top" height="77">Съобщение: <span class="red">*</span>&nbsp;&nbsp;</td>
+                <td valign="top">
+                    <textarea name="message" class="popupTArea" rows="2" cols="35"></textarea>
+                    <div id="messagemsg" width="100%"></div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <img id="captchaImg" border="0" src="http://www.gbg.bg/index.php/captcha"/> &nbsp; &nbsp;
+                  <a href="javascript: reloadCaptcha()"><img border="0" src="/resources/im/reload.gif" alt="Презареди изображението" title="Презареди изображението"/></a>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" align="right">Въведете показания код: <span class="red">*</span>&nbsp;&nbsp;</td>
+                <td>
+                  <input id="captcha" name="captcha" type="text" value="" class="popupInp" style="width:148px;"/>
+                  <div id="captchamsg" width="100%"></div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><br><input type="submit" class="submit" value="Изпрати" /></td>
+              </tr>
+            </table>
+
+            </form>
+            </div>
+  </body>
+</html>

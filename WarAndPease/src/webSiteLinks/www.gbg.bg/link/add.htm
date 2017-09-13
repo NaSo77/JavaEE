@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Гювеч: Добавяне на сайт</title>
+  <meta name="description" content="Най-пълният указател на всичко българско по мрежата * The most comprehensive directory of Bulgarian sites" />
+  <meta name="keywords" content="gyuvetch, gyuvetch.bg, Bulgaria, links, search, web, site, catalog, culture, art, business, yellow pages, geography, politics, education, history, economy, newspaper, magazine, radio, TV, company, news, gyuvetch, guvetch, guvech, gyuvetch.bg, Гювеч.bg, гювеч, Гювеч.bg, България, изкуство, бизнес, новини, справочник, политика, образование, история, икономика, вестник, радио, ТВ, списание, обява, gyuvetch, gyuvetch.bg, Bulgaria, links, search, web, site, catalog, culture, art, business, yellow pages, geography, politics, education, history, economy, newspaper, magazine, radio, TV, company, news, gyuvetch, guvetch, guvech, gyuvetch.bg, Гювеч.bg, гювеч, Гювеч.bg, България, изкуство, бизнес, новини, справочник, политика, образование, история, икономика, вестник, радио, ТВ, списание, обява" />
+  <meta name="robots" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="audience" content="all" />
+  <meta name="distribution" content="global" />
+  <meta name="robots" content="index,follow" />
+  <meta name="revisit-after" content="1 days" />
+  <meta name="content-language" content="bulgarian" />
+  <style>
+    @import "/resources/popup.css";
+  </style>
+    <script src="https://www.google.com/recaptcha/api.js?hl=bg" async defer></script>
+  <script src="/resources/js/common.js"></script>
+  <script src="/resources/js/loadXml.js"></script>
+
+</head>
+<body><!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NB8D5J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB8D5J');</script>
+<!-- End Google Tag Manager -->    
+    <div id="main">
+        <div id="addLinkForm">
+                            <form name="add" method="post">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td><img src="/resources/im/x.gif" height="1" width="130" border="0" alt=""/></td>
+                    <td><img src="/resources/im/x.gif" height="1" width="300" border="0" alt=""/></td>
+                    <td><img src="/resources/im/x.gif" height="1" width="70" border="0" alt=""/></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                        <div class="fl"><h1>Добавяне на сайт</h1></div>
+                        <div class="fr"><a href="#" onclick="top.window.tb_remove();"><img
+                        src="/resources/im/popup_close.gif" width="24" height="24" alt="затвори" title="затвори" border="0"/></a></div>
+                    </td>
+                  </tr>
+                  <tr><td height="5"></td></tr>
+                  <tr>
+                    <td colspan="3" id="topLinks">
+                        <div class="fl"><span>&nbsp;</span><a href="#" onclick="hidediv('addLinkForm');showdiv('addLinkInstr');">Инструкции за регистрация на сайт</a></div>
+                        <div class="fr" style="margin-bottom: -20px; position: relative;">
+                            <!--<span>&nbsp;</span><a href="http://netinfocompany.bg/adv.php?page=adv_item&item=19" target="_blank">Реклама чрез VIP линк</a>
+                            <br />-->
+                            <span>&nbsp;</span><a href="//a.abv.bg/www/delivery/ck.php?oaparams=2__bannerid=1137__zoneid=63__oadest=http://www.adwise.bg/about.php" target="_blank">Реклама с <img src="//gbg.bg/i/a/adwise1.gif" alt="" /></a>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr><td height="15"></td></tr>
+                  <tr><td colspan="2" height="30" valign="top"><h2>Информация за сайта</h2></td></tr>
+                  <tr>
+                    <td align="right" width="130" valign="top" height="42">URL: <span class="red">*</span>&nbsp;&nbsp;</td>
+                    <td valign="top" width="300">
+                        <input type="text" name="url" class="popupInp" size="40" value="" />
+                        <div id="urlmsg" width="100%"></div>
+                    </td>
+                    <td valign="top" align="left">
+                        <a href="#" onclick="isUrlIndexed();"><img
+                        src="/resources/im/url_exists.gif" width="25" height="25" border="0" alt="Индексиран ли е при нас?" title="Индексиран ли е при нас?"/></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" valign="top" height="42">Заглавие: <span class="red">*</span>&nbsp;&nbsp;</td>
+                    <td valign="top">
+                        <input type="text" name="name" class="popupInp" size="40" value="" />
+                        <div id="namemsg" width="100%"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" valign="top" height="75">Описание: <span class="red">*</span>&nbsp;&nbsp;</td>
+                    <td valign="top">
+                        <textarea name="description" class="popupTArea" rows="2" cols="35"></textarea>
+                        <div id="descriptionmsg" width="100%"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" valign="top" height="65">Ключови думи:&nbsp;&nbsp;</td>
+                    <td valign="top">
+                        <textarea name="keywords" class="popupTArea" rows="2" cols="35"></textarea>
+                        <div id="keywordsmsg" width="100%"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" valign="top" height="65">Коментари:&nbsp;&nbsp;</td>
+                    <td valign="top">
+                        <textarea name="comments" class="popupTArea" rows="2" cols="35"></textarea>
+                        <div id="commentsmsg" width="100%"></div>
+                    </td>
+                  </tr>
+                  <tr><td height="5"></td></tr>
+                  <tr><td colspan="2" height="30" valign="top"><h2>Контакти</h2></td></tr>
+                  <tr>
+                    <td align="right" valign="top" height="42">Име и фамилия: <span class="red">*</span>&nbsp;&nbsp;</td>
+                    <td valign="top">
+                        <input type="text" name="ownername" class="popupInp" size="35" value="" />
+                        <div id="ownernamesmsg" width="100%"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" valign="top" height="42">Имейл адрес: <span class="red">*</span>&nbsp;&nbsp;</td>
+                    <td valign="top">
+                        <input type="text" name="owneremail" class="popupInp" size="35" value="" />
+                        <div id="owneremailsmsg" width="100%"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">Декларирам, че съм се запознал и съм съгласен с <a href="http://www.gbg.bg/terms/" target="_blank">Общите условия</a> за ползване на услугите на уебсайта GBG.BG</td>
+                  </tr>
+                  <tr><td height="5"></td></tr>
+                  <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="agree" value="1" style="vertical-align: middle;" />&nbsp;съгласен съм&nbsp;<span class="red">*</span>
+                    <div id="agreemsg" width="100%"></div>
+                    </td>
+                  </tr>
+                    <tr>
+                        <td></td>
+                        <td><br> <div class="g-recaptcha" data-sitekey="6LfBzioUAAAAAAYJ-fG5uGEuH0bbzyedwaNk_q3o"></div><div id="agreemsg" width="100%"></div></td>
+
+                    </tr>
+                  <tr>
+                    <td></td>
+                    <td><br><input type="submit" class="submit" value="Изпрати" /></td>
+                  </tr>
+                </table>
+
+                </form>
+                    </div>
+        <div id="addLinkInstr" style="display:none;">
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td>
+                    <div class="fl"><h1>Добавяне на сайт</h1></div>
+                    <div class="fr"><a href="#" onclick="top.tb_remove();top.setZIndex();"><img
+                    src="/resources/im/popup_close.gif" width="24" height="24" alt="затвори" title="затвори" border="0"/></a></div>
+                </td>
+              </tr>
+              <tr><td height="5"></td></tr>
+              <tr>
+                <td align="right" id="backLink">
+                    <span>&nbsp;</span><a href="#" onclick="hidediv('addLinkInstr');showdiv('addLinkForm');">Обратно към формата</a>
+                </td>
+              </tr>
+              <tr>
+                <td><h2>Инструкции за регистрация на сайт</h2></td>
+              </tr>
+              <tr>
+                <td>
+                    <ol>
+                         <li>Въведете адреса на Вашия сайт в полето "URL", за да проверите дали сайтът не е вече индексиран в GBG.BG.
+                         Можете да въведете до 150 символа.</li>
+                         <li>Ако Вашият сайт не е регистриран, преминете към регистрацията.</li>
+                         <li>В полето "Заглавие" въведете заглавието на Вашия сайт. Могат да бъдат въведени до 150 символа.</li>
+                         <li>Полето "Описание" трябва да съдържа кратко описание на сайта (до 1000 символа).</li>
+                         <li>"Ключови думи" - тук можете да посочите думи, въз основа на които да се извършва търсене на сайтове,
+                         добавени в указателя на GBG.BG. Могат да бъдат въведени до 1000 символа.</li>
+                         <li>"Коментари" – тук може да напишете някакви допълнителни коментари, които искате да добавите. Могат да бъдат въведени до 1000 символа.</li>
+                         <li>Въведете името (до 150 символа) и електронния адрес за контакти (до 150 символа) на администратора или
+                         собственика на сайта, който регистрирате.</li>
+                         <li>След като попълните данните, натиснете бутона "Изпрати".</li>
+                       </ol><br />
+                       Заявките за индексиране на сайтове се обработват и одобряват от редактор. Указателната част на GBG.BG е предимно
+           указател на български сайтове. Всички сайтове, индексирани в GBG.BG, се проверяват периодично за
+           достъпност. Когато при няколко последователни проверки сайтът е недостъпен, системата го изтрива автоматично.<br /><br />
+           <b>При възникнали въпроси</b> относно редактиране или изтриване на вече регистрирани сайтове, можете да се свържете с нас
+          на адрес: <a href="mailto:info@netinfocompany.bg">info@netinfocompany.bg</a><br /><br />
+          <!-- <b>За индексиране на сайтове като VIP линкове</b> с приоритетно търсене по зададени ключови думи, можете да прочетете
+          повече <a href="http://netinfocompany.bg/adv.php?page=adv_item&item=19" target="_blank">тук</a>.<br /><br /> -->
+          <b>За реклама на сайта/бизнеса Ви чрез новата услуга за реклама на клик - ADWISE, можете да прочете повече <a href="http://www.adwise.bg/about.php" target="_blank">тук</a>.</b>
+                </td>
+              </tr>
+            </table>
+        </div>
+    </div>
+
+<script type="text/javascript">
+if(document.referrer != 'http://www.gbg.bg/' && document.referrer != 'http://gbg.bg/' && document.referrer != 'https://www.gbg.bg/' && document.referrer != 'https://gbg.bg/') document.domain = 'gbg.bg';
+</script>
+  </body>
+</html>

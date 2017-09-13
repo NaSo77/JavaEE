@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+    xmlns:ie="http://schemas.microsoft.com/Search/2008/"
+    xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+	<ShortName>Гювеч</ShortName>
+	<Description>Търсене в указателя на български сайтове на Гювеч</Description>
+	<Image height="16" width="16" type="image/icon">http://search.gbg.bg/favicon.ico</Image>
+	<Url type="text/html" template="http://search.gbg.bg/index.php?q={searchTerms}&amp;c=gbg&amp;os=1" />
+  <InputEncoding>UTF-8</InputEncoding>
+  <moz:SearchForm>http://search.gbg.bg/</moz:SearchForm>
+</OpenSearchDescription>
