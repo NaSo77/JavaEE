@@ -18,7 +18,6 @@ public class WarAndPease {
     public static String fileName = "war_and_peace.txt";
 
     public static void main(String[] args) {
-
 	File book = new File(relativePath, fileName);
 
 	longestWord(book);
@@ -130,7 +129,7 @@ public class WarAndPease {
     private static Scanner getScanner(File file) {
 	Scanner scanner = null;
 	try {
-	    scanner = new Scanner(file);
+	    scanner = new Scanner(file, "UTF-8");
 	} catch (FileNotFoundException e) {
 	    System.out.println("File not found");
 	}
@@ -187,10 +186,10 @@ public class WarAndPease {
 	int warCount = 0;
 	int peaceCount = 0;
 	for (String string : words) {
-	    if (string.equals("война")) {
+	    if (string.equals("пїЅпїЅпїЅпїЅпїЅ")) {
 		warCount++;
 	    }
-	    if (string.equals("мир")) {
+	    if (string.equals("пїЅпїЅпїЅ")) {
 		peaceCount++;
 	    }
 	}
