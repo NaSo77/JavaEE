@@ -1,0 +1,5 @@
+<fileExercises.Car>
+  <model>Ford</model>
+  <year>2000</year>
+  <color>Black</color>
+</fileExercises.Car>
