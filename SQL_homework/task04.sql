@@ -1,5 +1,5 @@
 SELECT 
-    CONCAT(email, '@mail.somecompany.com') AS 'Full Email Address'
+    CONCAT(email, '@mail.somecompany.com') AS 'full_email_address'
 FROM
     hr.employees
 
