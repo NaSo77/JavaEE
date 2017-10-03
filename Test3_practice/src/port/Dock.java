@@ -7,8 +7,13 @@ public class Dock {
     private String dockID;
     private ArrayBlockingQueue<Boat> opashka = new ArrayBlockingQueue<>(5);
 
+
     public Dock() {
 	this.dockID = "Dock" + uniqueID++;
+    }
+
+    public String getDockID() {
+	return dockID;
     }
 
     public void addBoat(Boat ship) {

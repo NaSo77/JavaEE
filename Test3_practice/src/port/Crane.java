@@ -1,10 +1,12 @@
 package port;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Crane extends Thread {
 
+    private DBManager dbManager = DBManager.getInstance();
     private static int uniqueID = 1;
     private ArrayList<Warehouse> warehouses;
     private ArrayList<Dock> docks;
@@ -18,7 +20,8 @@ public class Crane extends Thread {
     @Override
     public void run() {
 	while (true) {
-	    Boat boat = getRandomDock().getBoat();
+	    Dock dock = getRandomDock();
+	    Boat boat = dock.getBoat();
 	    List<Package> packages = boat.getPackages();
 
 	    System.out.println(Thread.currentThread().getName() + " is unloading the packages from " + boat.getName());
@@ -29,11 +32,18 @@ public class Crane extends Thread {
 	    } catch (InterruptedException e) {
 		e.printStackTrace();
 	    }
+
+	    for (Package p : packages) {
+		dbManager.insertIntoDB(boat.getName(), dock.getDockID(), this.getName(), LocalDateTime.now(),
+			p.getName());
+	    }
+
 	    Warehouse w = getRandomWarehouse();
 	    System.out.println(Thread.currentThread().getName() + " put all packages to " + w.getName());
 	    w.addPackages(packages);
 	}
     }
+
 
     private Dock getRandomDock() {
 	Dock result = null;

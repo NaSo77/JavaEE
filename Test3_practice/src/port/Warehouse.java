@@ -35,7 +35,7 @@ public class Warehouse {
 	try {
 	    Thread.sleep(PACKAGE_PROCESSING_TIME);
 	    Package p = this.allPackages.take();
-	    System.out.println(Thread.currentThread().getName() + " takes out the package with ID: " + p.getId());
+	    System.out.println(Thread.currentThread().getName() + " takes out the package with ID: " + p.getName());
 	} catch (InterruptedException e) {
 	    e.printStackTrace();
 	}

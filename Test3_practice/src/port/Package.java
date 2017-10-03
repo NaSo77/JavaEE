@@ -2,13 +2,13 @@ package port;
 
 public class Package {
     private static int uniqueID = 1;
-    private int id;
+    private String name;
 
-    public int getId() {
-	return id;
+    public String getName() {
+	return name;
     }
 
     public Package() {
-	this.id = uniqueID++;
+	this.name = "Package" + uniqueID++;
     }
 }
