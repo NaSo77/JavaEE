@@ -1,6 +1,8 @@
 package port;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +12,12 @@ public class Crane extends Thread {
     private static int uniqueID = 1;
     private ArrayList<Warehouse> warehouses;
     private ArrayList<Dock> docks;
+    private Harbor harbor;
 
-    public Crane(ArrayList<Warehouse> warehouses, ArrayList<Dock> docks) {
+    public Crane(ArrayList<Warehouse> warehouses, ArrayList<Dock> docks, Harbor harbor) {
 	this.warehouses = warehouses;
 	this.docks = docks;
+	this.harbor = harbor;
 	setName("Crane" + uniqueID++);
     }
 
@@ -36,6 +40,11 @@ public class Crane extends Thread {
 	    for (Package p : packages) {
 		dbManager.insertIntoDB(boat.getName(), dock.getDockID(), this.getName(), LocalDateTime.now(),
 			p.getName());
+
+		Record record = new Record(p.getName(), dock.getDockID(), boat.getName(), this.getName(),
+			LocalDate.now(), LocalTime.now());
+
+		this.harbor.addRecordRecordToDiary(record);
 	    }
 
 	    Warehouse w = getRandomWarehouse();
