@@ -8,7 +8,7 @@ public class Gurne {
     private int bob = 100;// grams
 
     public synchronized void sipiBob() {
-	if (this.bob >= MAX_BOB) {
+	while (this.bob >= MAX_BOB) {
 	    try {
 		this.wait();
 	    } catch (InterruptedException e) {
@@ -24,7 +24,7 @@ public class Gurne {
     }
 
     public synchronized void hapniBob() {
-	if (this.bob <= MIN_BOB) {
+	while (this.bob <= MIN_BOB) {
 	    try {
 		this.wait();
 	    } catch (InterruptedException e) {
