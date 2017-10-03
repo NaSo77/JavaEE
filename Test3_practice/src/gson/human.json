@@ -1,0 +1,10 @@
+{
+  "name": "Hristo",
+  "age": 31,
+  "isАwesome": true,
+  "words": [
+    "My name is Hristo",
+    "I am practising json format",
+    "I want to be an java developer"
+  ]
+}
