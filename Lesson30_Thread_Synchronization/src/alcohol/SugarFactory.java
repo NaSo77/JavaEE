@@ -14,11 +14,11 @@ public class SugarFactory {
 		e.printStackTrace();
 	    }
 	}
+	this.notifyAll();
 	String name = Thread.currentThread().getName();
 	System.out.println(name + " added sugar");
 
 	this.currentQuantity += addQuntity;
-	notifyAll();
     }
 
     public synchronized int getSugar(int removeQuntity) {
@@ -30,10 +30,10 @@ public class SugarFactory {
 		e.printStackTrace();
 	    }
 	}
+	this.notifyAll();
 	String name = Thread.currentThread().getName();
 	System.out.println(name + " get sugar");
 	this.currentQuantity -= removeQuntity;
-	notifyAll();
 	return removeQuntity;
     }
 }

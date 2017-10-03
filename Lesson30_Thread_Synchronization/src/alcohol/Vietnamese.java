@@ -1,12 +1,12 @@
 package alcohol;
 
-public class Vietnamec extends Thread {
+public class Vietnamese extends Thread {
 
     private static final int PRODUCING_TIME = 10_000;
     private static final int SUGAR_QUANTITY = 100;
     private SugarFactory zaharniZavodi;
 
-    public Vietnamec(SugarFactory zaharniZavodi, String name) {
+    public Vietnamese(SugarFactory zaharniZavodi, String name) {
 	this.zaharniZavodi = zaharniZavodi;
 	setName(name);
     }

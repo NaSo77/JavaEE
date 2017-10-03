@@ -25,7 +25,7 @@ public class Warehouse {
 
 	while (kgInBidon + kgNabranoGrozde > MAX_IN_BIDON) {
 	    try {
-		System.out.println(Thread.currentThread().getName() + " nqma nqmasto za grozdeto. Shte chakam");
+		System.out.println(Thread.currentThread().getName() + " not enougth place for the grape. I will wait");
 		this.wait();
 	    } catch (InterruptedException e) {
 		e.printStackTrace();
@@ -34,24 +34,24 @@ public class Warehouse {
 
 	this.bidoni.put(type, kgInBidon + kgNabranoGrozde);
 	String name = Thread.currentThread().getName();
-	System.out.println(name + " dobavi s stanaha " + this.bidoni.get(type) + "kg " + type + " grozde");
+	System.out.println(name + " dobavi s stanaha " + this.bidoni.get(type) + "kg " + type + " grape");
 	this.notifyAll();
     }
 
-    public synchronized void getGrape(GrapeType type, int kgGrozdeZaVzemane) {
-	while (this.bidoni.get(type) < kgGrozdeZaVzemane) {
+    public synchronized void getGrape(GrapeType type, int getQuantity) {
+	while (this.bidoni.get(type) < getQuantity) {
 	    try {
 		System.out.println(
-			Thread.currentThread().getName() + " Nqma dostatachno " + type + " grozde. Shte chakam");
+			Thread.currentThread().getName() + " Not enought " + type + " grape. I will wait");
 		this.wait();
 	    } catch (InterruptedException e) {
 		e.printStackTrace();
 	    }
 	}
 
-	this.bidoni.put(type, this.bidoni.get(type) - kgGrozdeZaVzemane);
+	this.bidoni.put(type, this.bidoni.get(type) - getQuantity);
 	String name = Thread.currentThread().getName();
-	System.out.println(name + " vze i ostanaha " + this.bidoni.get(type) + "kg " + type + " grozde");
+	System.out.println(name + " get and there are " + this.bidoni.get(type) + "kg " + type + " grape");
 	this.notifyAll();
     }
 

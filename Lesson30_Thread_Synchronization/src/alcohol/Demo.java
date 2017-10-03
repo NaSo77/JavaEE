@@ -2,27 +2,27 @@ package alcohol;
 
 public class Demo {
     public static void main(String[] args) {
-	Warehouse sklad = new Warehouse();
-	AlcoholShore rakiaStore = new AlcoholShore();
-	GrapeProducer ginka = new GrapeProducer(sklad, "Berach1");
-	GrapeProducer minka = new GrapeProducer(sklad, "Berach2");
-	GrapeProducer siika = new GrapeProducer(sklad, "Berach3");
-	SugarFactory zaharniZavodi = new SugarFactory();
-	Vietnamec vietnamec = new Vietnamec(zaharniZavodi, "Vietnamec");
-	AlcoholProducer gosho = new AlcoholProducer(sklad, rakiaStore, zaharniZavodi, "RAKIDJIQTA");
-	Man stoiqn = new Man(rakiaStore, "PIANICATA");
-	Report report = new Report(rakiaStore, sklad);
+	Warehouse warehouse = new Warehouse();
+	AlcoholShore alcoholShore = new AlcoholShore();
+	GrapeProducer gp1 = new GrapeProducer(warehouse, "GrapeProducer1");
+	GrapeProducer gp2 = new GrapeProducer(warehouse, "GrapeProducer2");
+	GrapeProducer gp3 = new GrapeProducer(warehouse, "GrapeProducer3");
+	SugarFactory sugarFactory = new SugarFactory();
+	Vietnamese vietnamese = new Vietnamese(sugarFactory, "Vietnamese");
+	AlcoholProducer ap = new AlcoholProducer(warehouse, alcoholShore, sugarFactory, "AlcoholProducer");
+	Man man1 = new Man(alcoholShore, "AlcoholConsumer");
+	Report report = new Report(alcoholShore, warehouse);
 
-	vietnamec.start();
+	vietnamese.start();
 
 	report.start();
 
-	ginka.start();
-	siika.start();
-	minka.start();
+	gp1.start();
+	gp3.start();
+	gp2.start();
 
-	gosho.start();
+	ap.start();
 
-	stoiqn.start();
+	man1.start();
     }
 }
