@@ -3,9 +3,9 @@ package writeToDB;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDateTime;
 
 public class DBWriter {
 
@@ -26,7 +26,9 @@ public class DBWriter {
     public static void main(String[] args) {
 
 	try {
+
 	    Class.forName("com.mysql.jdbc.Driver");
+
 	} catch (ClassNotFoundException e1) {
 	    e1.printStackTrace();
 	}
@@ -38,12 +40,22 @@ public class DBWriter {
 	    PreparedStatement stmt = connection.prepareStatement(
 		    "INSERT INTO javari (name) VALUES (?)",
 		    Statement.RETURN_GENERATED_KEYS);
-	    stmt.setString(1, LocalDateTime.now().toString());
+	    stmt.setString(1, "name");
 	    stmt.executeUpdate();
+
+	    ResultSet result = stmt.executeQuery("SELECT age, name FROM javari WHERE gender = 'F' AND AGE < 22;");
+	    while (result.next()) {
+		String name = result.getString("name");
+		int age = result.getInt("age");
+		System.out.println(name + " - " + age);
+	    }
 
 	} catch (SQLException e) {
 	    e.printStackTrace();
 	}
+
+
+
     }
 
 }
