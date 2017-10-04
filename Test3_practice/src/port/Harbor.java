@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Map.Entry;
 import java.util.Random;
+import java.util.TreeMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Harbor {
@@ -33,12 +35,34 @@ public class Harbor {
 	this.diary.add(record);
     }
 
+    public void printAllUnloadedPackages() {
+	// dock -> package, boat, crane, date, time
+	TreeMap<String, ArrayList<String>> allPakages = new TreeMap<>();
+	for (Record record : diary) {
+	    String dock = record.getDockID();
+	    if (!allPakages.containsKey(dock)) {
+		allPakages.put(dock, new ArrayList<>());
+	    }
+	    
+	    String newLine = record.getPackageID() + ", " + record.getBoatID() + ", " + record.getCraneID() + ", "
+		    + record.getDate() + ", " + record.getTime();
+	    allPakages.get(dock).add(newLine);
+	}
+
+	for (Entry<String, ArrayList<String>> entry : allPakages.entrySet()) {
+	    System.out.println(entry.getKey());
+	    for (String row : entry.getValue()) {
+		System.out.println("    " + row);
+	    }
+	}
+    }
+
     private void generateCranes() {
 	this.cranes = new ArrayList<>();
 	for (int i = 0; i < CRANES; i++) {
 	    this.cranes.add(new Crane(warehouses, docks, this));
 	}
-	
+
 	for (Crane crane : cranes) {
 	    crane.start();
 	}

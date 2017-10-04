@@ -5,7 +5,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 public class Dock {
     private static int uniqueID = 1;
     private String dockID;
-    private ArrayBlockingQueue<Boat> opashka = new ArrayBlockingQueue<>(5);
+    private ArrayBlockingQueue<Boat> opashka = new ArrayBlockingQueue<>(3);
 
 
     public Dock() {
@@ -29,7 +29,7 @@ public class Dock {
 	Boat boat = null;
 	try {
 	    boat = this.opashka.take();
-	    System.out.println(boat.getName() + " left the dock");
+	    // System.out.println(boat.getName() + " left the dock");
 	} catch (InterruptedException e) {
 	    e.printStackTrace();
 	}

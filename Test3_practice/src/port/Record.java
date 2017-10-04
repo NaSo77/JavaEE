@@ -12,6 +12,30 @@ public class Record {
     private LocalDate date;
     private LocalTime time;
 
+    public String getPackageID() {
+	return packageID;
+    }
+
+    public String getBoatID() {
+	return boatID;
+    }
+
+    public String getCraneID() {
+	return craneID;
+    }
+
+    public LocalDate getDate() {
+	return date;
+    }
+
+    public String getDockID() {
+	return dockID;
+    }
+
+    public LocalTime getTime() {
+	return time;
+    }
+
     public Record(String packageID, String dockID, String boatID, String craneID, LocalDate date, LocalTime time) {
 	this.packageID = packageID;
 	this.dockID = dockID;

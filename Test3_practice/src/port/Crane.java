@@ -50,6 +50,10 @@ public class Crane extends Thread {
 	    Warehouse w = getRandomWarehouse();
 	    System.out.println(Thread.currentThread().getName() + " put all packages to " + w.getName());
 	    w.addPackages(packages);
+
+	    harbor.printAllUnloadedPackages();
+
+	    harbor.leaveHarbour(boat);
 	}
     }
 
